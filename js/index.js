@@ -48,11 +48,11 @@ function renderPepperoni() {
 
   function renderMushrooms() {
     // Iteration 1: set the visibility of `<section class="mushroom">`
-    document.querySelectorAll('.mushroom').forEach((mushroom) => {
+    document.querySelectorAll('.mushroom').forEach((onemushroom) => {
       if (state.mushrooms) {
-        mushroom.style.visibility = 'visible';
+       onemushroom.style.visibility = 'visible';
       } else {
-        mushroom.style.visibility = 'hidden';
+       onemushroom.style.visibility = 'hidden';
       }
     });
   }
@@ -61,11 +61,11 @@ function renderPepperoni() {
   
   function renderGreenPeppers() {
     // Iteration 1: set the visibility of `<section class="green-pepper">`
-      document.querySelectorAll('.green-pepper').forEach((greenPepper) => {
+      document.querySelectorAll('.green-pepper').forEach((onegreenPepper) => {
         if (state.greenPeppers) {
-          greenPepper.style.visibility = 'visible';
+          onegreenPepper.style.visibility = 'visible';
         } else {
-          greenPepper.style.visibility = 'hidden';
+          onegreenPepper.style.visibility = 'hidden';
         }
       });
   
@@ -73,28 +73,26 @@ function renderPepperoni() {
   
   function renderWhiteSauce() {
     // Iteration 2: add/remove the class "sauce-white" of `<section class="sauce">`
-    document.querySelectorAll('.sauce').forEach((sauce) => {
+    document.querySelectorAll('.sauce').forEach((oneWhiteSauce) => {
       if (state.whiteSauce) {
-        sauce.style.visibility = 'visible';
+        oneWhiteSauce.classList.add(`sauce-white`);
       } else {
-        sauce.style.visibility = 'hidden';
+        oneWhiteSauce.classList.remove('sauce-white');
       }
     });
-   
   }
     
   
   
   function renderGlutenFreeCrust() {
     // Iteration 2: add/remove the class "crust-gluten-free" of `<section class="crust">`
-    document.querySelectorAll('.crust').forEach((crust) => {
+    document.querySelectorAll('.crust').forEach((oneGlutenFree) => {
       if (state.glutenFreeCrust) {
-        crust.style.visibility = 'visible';
+        oneGlutenFree.classList.add('crust-gluten-free');
       } else {
-        crust.style.visibility = 'hidden';
+        oneGlutenFree.classList.remove('crust-gluten-free');
       }
     });
-  
   }
   
   function renderButtons() {
